@@ -1,6 +1,6 @@
-This is the first release of a RepRap-XY 3D printer. It is based on the excellent design of Zelogik. See his github archive at:  https://github.com/zelogik/AluXY
+This is a modified release of the RepRap-XY 3D printer. It is based on the excellent design of Zelogik. See his github archive at:  https://github.com/zelogik/AluXY and Jand archive at:https://github.com/jand1122/RepRap-XY
 
-His design and my variant are discussed in the RepRap forum at:: http://forums.reprap.org/read.php?4,297740
+Their designs/variants are discussed in the RepRap forum at:: http://forums.reprap.org/read.php?4,297740
 
 When I saw this printer I thought, this is the printer I want. It has all the features I want in a printer:
 
@@ -30,4 +30,7 @@ To see some videos of my printer have a look at my youtube channel: https://www.
 and some images at my imgur album: http://jand1122.imgur.com/
 
 
-Have fun. 
+Iteration 2 Modifications:
+- Flanged bearings, screw, and Pulley idlers to reduce backlash
+- new Z stage
+- Mounting for Ultimachine Tigershark 3D printer motherboard
