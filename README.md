@@ -18,3 +18,7 @@ Iteration 2 Modifications:
 - Spacer corner brackets for motor blocks and idler blocks, also add structur to frame
 - (x2) B'Struder Direct Driver Extruder w/ MK8 Driver Gear setup for 1.75mm Filament
 - Mounting for Ultimachine RAMBo/AMBIT
+
+Liscensing: 
+Creative Commons Attribution-ShareAlike 4.0 International License
+https://creativecommons.org/licenses/by-sa/4.0/legalcode
