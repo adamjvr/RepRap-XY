@@ -1,4 +1,7 @@
+# RepRap-XY-Iteration-2
+## Open Source CoreXY RepRap 3D Printer
 ![RepRap-XY Iteration 2 Assembly](/Pictures/rxyi2.png)
+ RepRap-XY Iteration 2 FreeCAD Assembly
 
 This is a modified release of the RepRap-XY 3D printer. It is based on the excellent design of Jand archive at:https://github.com/jand1122/RepRap-XY
 
