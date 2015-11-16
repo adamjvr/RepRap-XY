@@ -27,7 +27,8 @@ Frame
 - Lots of M4 T-nuts
 - (24x) Printed Corner Brackets
 - (4x) Printed Inner Corner Brackets
-- 
+
+
 Z Axis
 - (2x) 12mm Rod 500mm
 - Trapizoidal Lead Screw
@@ -39,7 +40,8 @@ Z Axis
 - 14x 40mm M5 bolt
 - (8x) 25mm M5 bolt
 - (4x) 15mm M3 bolt (to attach nema motor)
-- 
+
+
 X & Y Axis
 - (2x) NEMA17 Stepper Motors
 - (24x) F624ZZ flanged bearings
