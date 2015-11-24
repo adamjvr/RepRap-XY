@@ -28,7 +28,7 @@ frame_spacer_height = 18; //height to spacer to mount to frame to clear x-ends
 // calculated vars
 
 //y bearing block
-y_bearing_block_length = 2*y_bushing[2] + M3*2 + 7.8;
+y_bearing_block_length = 2*y_bushing[2] + M3*2;
 y_bearing_block_width = y_bearing[1]+5;
 y_bearing_block_height = 6+y_bushing[1]/2;
 

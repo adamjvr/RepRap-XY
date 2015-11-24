@@ -30,6 +30,26 @@ x_width = x_bearing[0] * 2 + 20;//20 for some extra dist to screw down (todo wha
 x_length = y_bearing_block_width/2+xy_bearing_distance+belt_bearing[1]/2;
 x_top_width = GT2_belt_thickness+belt_bearing[1]+M4+6; 
 
+module base(){
+	union(){
+
+		translate([2.75,-1,0]) 
+            cube([y_bearing_block_length-5.5, y_bearing_block_width+2, y_bearing_block_height]); // bearing Block
+
+            
+        translate([0,-1,0])
+            hull(){
+            translate([y_bearing_block_length/2- GT2_belt_thickness/2 - belt_bearing[1]/2-M4/2-3, 0, x_height/2-1]) 
+                cube([x_top_width, x_length, 1]);
+            translate([y_bearing_block_length/2-x_width/2,0,0])
+                cube([x_width, x_length, y_bearing_block_height]); //rod_block
+
+            }
+	}//end union
+
+}
+
+
 
 
 
@@ -57,19 +77,20 @@ module xy_block(top=1, clamp=0){
 		//cut to fit bearings for y_axis
 		translate([(y_bearing_block_length-62)/2, y_bearing_block_width/2, 0])
 			rotate([0,90,0])
-				#cylinder(d=y_bushing[1]+0.2, h=62+0.2, $fn=30);
+				cylinder(d=y_bushing[1]+0.2, h=62+0.2, $fn=30);
 
 		//cut middle to make easier to print top part without support
-		translate([y_bearing_block_length/2-y_bearing[2]+5/2, 0,0 ])
-			cube([y_bearing[2]*2-5, y_bearing_block_width, 3]);
+		translate([y_bearing_block_length/2-y_bearing[2]+5/2,-1.1,-.1])
+			cube([y_bearing[2]*2-5, y_bearing_block_width+2.2, 3.1]);
 
 		//cut hole for x_rod
-		translate([y_bearing_block_length/2, x_length+0.1,x_rod_distance/2]) 
-			rotate([90,0,0]) cylinder(d=x_bearing[0]+0.2, h=x_length+0.2, $fn=30);
+		translate([y_bearing_block_length/2, x_length+.1,x_rod_distance/2]) 
+			rotate([90,0,0]) 
+                cylinder(d=x_bearing[0]+0.2, h=x_length+1.2, $fn=30);
 
 		//clear X bearing area
-		color("orange")translate([y_bearing_block_length/2-x_width/2-0.1,y_bearing_block_width,0])
-			cube([x_width+0.2, x_length, min_beltbearing_height/2]);
+		color("orange")translate([y_bearing_block_length/2-x_width/2-0.1,y_bearing_block_width,-.1])
+			cube([x_width+0.2, x_length, min_beltbearing_height/2+.1]);
 	
 		//cut m4 screw hole to mount belt bearings
 		for(x=[y_bearing_block_length/2- GT2_belt_thickness/2 - belt_bearing[1]/2,
@@ -80,7 +101,7 @@ module xy_block(top=1, clamp=0){
 				//cut hole for head/nut
 				if(top==1){
 					translate([0, 0,x_height/2-4])
-						cylinder(d=9, h=4, $fn=60);//3.4 min height for head
+						cylinder(d=9, h=4.1, $fn=60);//3.4 min height for head
 				} else {
 					translate([0, 0,x_height/2-4])
 						cylinder(d=m4_nut_diameter_horizontal, h=4, $fn=6);//3.4 min height for head
@@ -92,15 +113,16 @@ module xy_block(top=1, clamp=0){
 		//screws for y bearing clamp (m3) (as jand next to bearings)
 		translate([y_bearing_block_length/2, y_bearing_block_width/2, 0]){
 			for(x=[-y_bearing[2]-M3/2, +y_bearing[2]+M3/2]){
-				for(y=[y_bearing[0]/2+2, -y_bearing[0]/2-2]){
-					translate([x,y,0])cylinder(d=M3, h=x_height, $fn=60);
+				for(y=[y_bearing[0]/2+4.5, -y_bearing[0]/2-4.5]){
+					translate([x,y,-.1])
+                        cylinder(d=M3, h=x_height, $fn=60);
 				}
 			}
 		}
 		
 		if(clamp==true){
 			//make cutout for clamp and holes for screws
-			x_rod_clamp();
+			translate([0,0,0]) x_rod_clamp();
 			//if(clamp_ziptie==true){
 				x_rod_ziptie();
 			//} else {
@@ -110,35 +132,19 @@ module xy_block(top=1, clamp=0){
 	}//end difference
 }
 
-module base(){
-	union(){
-
-		cube([y_bearing_block_length, y_bearing_block_width, y_bearing_block_height]); // bearing Block
-
-		hull(){
-			translate([y_bearing_block_length/2- GT2_belt_thickness/2 - belt_bearing[1]/2-M4/2-3, 0, x_height/2-1]) cube([x_top_width, x_length, 1]);
-		translate([y_bearing_block_length/2-x_width/2,0,0])
-			cube([x_width, x_length, y_bearing_block_height]); //rod_block
-
-		}
-	}//end union
-
-}
-
-
 
 
 module x_rod_clamp(){
 
 		//cut rod clamp for x-rod(with 45 deg slope so can print main piece without support)
-		ch=(x_height-x_rod_distance)/2;
+		ch=(x_height-x_rod_distance)/2+.01;
 		che = tan(45)*ch;
 
 		
 		translate([x_length+y_bearing_block_length/2-x_length/2,y_bearing_block_width,x_rod_distance/2])rotate([90,0,-90])linear_extrude(height=x_length, slices = 20)
 			polygon( points=[[0,0],
-				[y_bearing_block_width,0],
-              	[y_bearing_block_width,ch],
+				[y_bearing_block_width+1.1,0],
+              	[y_bearing_block_width+1.1,ch],
 				[-che,ch]] 
 			);						
 }
