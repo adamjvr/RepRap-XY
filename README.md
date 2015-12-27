@@ -17,7 +17,8 @@ Iteration 2 Modifications:
 - Corner bracket parts for frame in lieu of metal right angle t-slot brackets
 - Spacer corner brackets for motor blocks and idler blocks, also add structur to frame
 - (x2) B'Struder Direct Driver Extruder w/ MK8 Driver Gear setup for 1.75mm Filament
-- Mounting for Ultimachine RAMBo/AMBIT
+- Mounting for Ultimachine Archim 32 Bit 3D Printer Motherboard
+- Runs TinyG motion control firmware on Ultimachine Archim for superior performance and resolution like no other
 
 ## Bill of Materials
 
