@@ -61,6 +61,9 @@ X & Y Axis
 - (6x) 15mm M3 bolt
 - (8x) 10mm M3 bolt (attach nema motors)
 
+Release Notes:
+- Stepper Motor Model Borrowed from:https://grabcad.com/library/nema-17-1
+- Screws Borrowed from: https://github.com/Protarios/RepRap-XY
 
 Liscensing: 
 Creative Commons Attribution-ShareAlike 4.0 International License
