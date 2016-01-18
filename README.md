@@ -63,7 +63,7 @@ X & Y Axis
 
 Release Notes:
 - Stepper Motor Model Borrowed from:https://grabcad.com/library/nema-17-1
-- Screws Borrowed from: https://github.com/Protarios/RepRap-XY
+- Screws Borrowed from: https://github.com/FreeCAD/FreeCAD-library
 
 Liscensing: 
 Creative Commons Attribution-ShareAlike 4.0 International License
