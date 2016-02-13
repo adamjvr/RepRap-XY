@@ -1,6 +1,6 @@
 # RepRap-XY-Iteration-2
 ## Open Source CoreXY RepRap 3D Printer
-![RepRap-XY Iteration 2 Assembly](/Pictures/RepRapXYi2.png)
+![RepRap-XY Iteration 2 Assembly](/Pictures/latest-rev-1-10-16-image.png)
  RepRap-XY Iteration 2 FreeCAD Assembly
 
 This is a modified release of the RepRap-XY 3D printer. It is based on the excellent design of Jand archive at:https://github.com/jand1122/RepRap-XY
@@ -61,6 +61,9 @@ X & Y Axis
 - (6x) 15mm M3 bolt
 - (8x) 10mm M3 bolt (attach nema motors)
 
+Release Notes:
+- Stepper Motor Model Borrowed from:https://grabcad.com/library/nema-17-1
+- Screws Borrowed from: https://github.com/FreeCAD/FreeCAD-library
 
 Liscensing: 
 Creative Commons Attribution-ShareAlike 4.0 International License
