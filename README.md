@@ -1,6 +1,6 @@
 # RepRap-XY-Iteration-2
 ## Open Source CoreXY RepRap 3D Printer
-![RepRap-XY Iteration 2 Assembly](/Pictures/latest-rev-1-10-16-image.png)
+![RepRap-XY Iteration 2 Assembly](/Pictures/latest-rev-6-5-16.png)
  RepRap-XY Iteration 2 FreeCAD Assembly
 
 This is a modified release of the RepRap-XY 3D printer. It is based on the excellent design of Jand archive at:https://github.com/jand1122/RepRap-XY
@@ -12,7 +12,7 @@ RepRap-XY-Iteration 2 is designed to be an improvement over the original RepRap-
 Iteration 2 Modifications:
 - Sdavi's XY Blocks modified for 8x12x30 Brash Bushings
 - Custom X Carriage based on Sdavi's design remodeled from scratch
-- Mounting for E3D V6, E3D Chimera, E3D Cyclops 
+- Mounting for E3D V6, E3D Chimera, E3D Cyclops
 - Increased Z axis height of 100mm, printer height 500mm
 - Corner bracket parts for frame in lieu of metal right angle t-slot brackets
 - Spacer corner brackets for motor blocks and idler blocks, also add structur to frame
@@ -65,7 +65,7 @@ Release Notes:
 - Stepper Motor Model Borrowed from:https://grabcad.com/library/nema-17-1
 - Screws Borrowed from: https://github.com/FreeCAD/FreeCAD-library
 
-Liscensing: 
+Liscensing:
 Creative Commons Attribution-ShareAlike 4.0 International License
 
 https://creativecommons.org/licenses/by-sa/4.0/legalcode
